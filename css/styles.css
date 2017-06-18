@@ -103,6 +103,7 @@ section {
 }
 body {
   line-height: 1;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 ol,
 ul {
@@ -1036,13 +1037,10 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-body {
-  font-family: Geneva, Arial, Helvetica, sans-serif;
-}
 .c-menu {
   color: #ececec;
   background: #373c40;
-  font-weight: 600;
+  font-weight: 500;
 }
 .c-menu__item {
   display: inline-block;
@@ -1051,13 +1049,6 @@ body {
 .c-menu__link {
   text-decoration: none;
   color: #ececec;
-  text-transform: uppercase;
-  font-size: 1.5vw;
-}
-.c-menu__link--is-active {
-  color: #ffffff;
-  padding-left: 2em;
-  text-decoration: none;
   text-transform: uppercase;
   font-size: 1.5vw;
 }
@@ -1076,7 +1067,7 @@ body {
   padding: 2.5vw;
   cursor: pointer;
 }
-.c-menu__button img {
+.c-menu__symbol {
   width: 3vw;
   height: 3vw;
 }
@@ -1085,16 +1076,26 @@ body {
   display: none;
   z-index: 999;
 }
-.c-menu__nav--small li {
+.c-menu__item--small {
   background-color: #373c40;
   margin-left: -24vw;
   padding: 2vw;
 }
-.c-menu__nav--small a {
+.c-menu__link--small {
+  text-decoration: none;
+  color: #ececec;
   font-size: 2.5vw;
 }
-.c-menu__nav--small a:hover {
+.c-menu__link--small:hover {
   color: #ffffff;
+}
+.is-active {
+  color: #ffffff;
+  font-weight: 900;
+  padding-left: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5vw;
 }
 .c-heading {
   background: linear-gradient(135deg, #1bb5c6 0%, #0989a4 100%);
@@ -1123,6 +1124,7 @@ body {
   color: #9485a2;
 }
 .c-review__button {
+  /*Mixins fo buttons*/
   background: #bc3184;
 }
 .c-review__button a {
@@ -1137,6 +1139,7 @@ body {
   background: #a92c77;
 }
 .c-portfolio__button--large {
+  /*Mixins fo buttons*/
   background: #5b10a1;
 }
 .c-portfolio__button--large a {
@@ -1146,10 +1149,6 @@ body {
   margin: 37% 39% 40% 44%;
   width: 3vw;
   height: 3vw;
-}
-.c-portfolio__button--large img {
-  width: 8.5%;
-  height: 8.5%;
 }
 .c-portfolio :hover {
   background: #520e91;
