@@ -1,25 +1,21 @@
 @import 'reset.less';
 @import 'grid/grid.css.less';
 @import 'variables.less';
-.button-color (@background;) {
+.button-color (@background) { /*Mixins fo buttons*/
 	  background: @background;
-	    a {
+	   a {
 		 position: relative;
 	   }
 	   img {
 	   margin: 37% 39% 40% 44%;
 	   width: 3vw;
 	   height: 3vw;
-	   }
-}
-
-body {
-    font-family: Geneva, Arial, Helvetica, sans-serif;
-}
+	}
+} 
 .c-menu {
    color: @menu-item-color;
    background: @menu-color;
-   font-weight: 600;
+   font-weight: 500;
    &__item {
         display: inline-block;
 		margin: 3em 0 3em 2em;
@@ -29,50 +25,53 @@ body {
 		color: @menu-item-color;
 		text-transform: uppercase;
 		font-size: 1.5vw;
-		}
-	&__link--is-active {
-        color: @menu-active-item-color;
-	    padding-left: 2em;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: 1.5vw;
-    }
-   &__title {
+	}
+    &__title {
         height: 8vw;
         background: @menu-color;
 	    margin-bottom: 10%;
         text-transform: capitalize;
 		padding: 2.5vw;
 		font-size: 3vw;
-   }
-   &__button {
+    }
+    &__button {
        color: @menu-active-item-color;
        background: @menu-button-color;
 	   height: 8vw;
 	   padding: 2.5vw;
 	   cursor: pointer;
-	    img {
-	      width: 3vw;
-	      height: 3vw;
-	    }
-    }
+	}
+	   &__symbol {
+	   width: 3vw;
+	   height: 3vw;
+	}
 	&__nav--small {
     position: absolute;
     display: none;
     z-index: 999;
-	li {
-		background-color: @menu-color;
-	    margin-left: -24vw;
-		padding: 2vw;
+    }
+	&__item--small {
+	background-color: @menu-color;
+	margin-left: -24vw;
+	padding: 2vw;
 	}
-	a {
+	&__link--small {
+	text-decoration: none;
+	color: @menu-item-color;
 	font-size: 2.5vw;
 	}
-	a:hover {
+	&__link--small:hover {
 	color: @menu-item-color*3;
 	}
-	}
 }
+.is-active {
+        color: @menu-active-item-color;
+		font-weight: 900;
+	    padding-left: 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.5vw;
+}   
 .c-heading {
     background: @heading-background-color;
         &__header {
@@ -108,10 +107,6 @@ body {
 .c-portfolio {
     &__button--large{
 	    .button-color(@portfolio-color);
-		img {
-		width: 8.5%;
-		height: 8.5%;
-		}
     }
 		:hover {
 	     background: @portfolio-color*0.9;
